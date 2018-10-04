@@ -11,6 +11,6 @@ class CatsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Furbook\Cat::class, 50)->create();
+        factory(furbook\Cat::class, 50)->create();
     }
 }
