@@ -6,6 +6,6 @@
 
 @section('content')
     {!! Form::model($cat, ['url' => '/cats/' . $cat->id, 'method' => 'PUT']) !!}
-    @include('partials.form.cat')
+    @include('partials.forms.cat')
     {!! Form::close() !!}
 @endsection

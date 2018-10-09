@@ -21,3 +21,13 @@ $factory->define(furbook\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(furbook\Cat::class, function (Faker $faker) {
+    return [
+        'name' => $faker->name,
+        'date_of_birth' => $faker->date(),
+        'breed_id' => 1,
+        'created_at' => $faker->unixTime(),
+        'updated_at' => $faker->unixTime()
+    ];
+});
