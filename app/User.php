@@ -27,4 +27,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    public function owns(Cat $cat){
+        return $this->id == $cat->user_id;
+    }
+    public  function  canEdit(Cat $cat){
+        return $this->is_admin || $this->owns($cat);
+    }
+    public  function  isAdministrator(){
+        return $this->getAttributes('is_admin');
+    }
 }
